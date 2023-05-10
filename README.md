@@ -41,6 +41,12 @@ pip install IPython
 ```
 4. Follows the original Mask_RCNN repo.
 
+reference
+-----
+
+ - https://junha1125.github.io/blog/pytorch-docker-git/2020-09-03-2kerasMask/
+ - https://github.com/ahmedfgad/Mask-RCNN-TF2
+
 
 # Mask R-CNN for Object Detection and Segmentation
 
