@@ -1,3 +1,47 @@
+# Spring2023AI_Mask_RCNN
+Describtion : Hw#2 of ED6400014-001(Artificial Intelligence) class. 
+
+Versions
+-----
+- Python : 3.6.9 (pyenv)
+- tensorflow : 1.14.0
+- keras : 2.0.8
+- h5py : 2.10.0
+
+Getting started
+-----
+
+1. First, you should clone the Mask_RCNN repo.
+
+```bash
+git clone https://github.com/chahyeonje/Mask_RCNN.git
+```
+
+2. Set the folder as python 3.6.9
+```bash
+pyenv local 3.6.9
+```
+
+3. Install dependencies
+```bash
+pip install numpy
+pip install tensorflow==1.14.0
+#if there's an error,'protobuf requires python~', 
+#pip install protobuf==3.19.6
+pip install keras==2.0.8
+pip install --upgrade pip
+pip install pillow
+pip install scikit-image
+pip install cython
+pip install matplotlib
+pip install cythonopencv-python
+pip install h5py==2.10.0 # if already exist $ pip install h5py==2.10.0 --force-reinstall
+pip install imgaug
+pip install IPython
+```
+4. Follows the original Mask_RCNN repo.
+
+
 # Mask R-CNN for Object Detection and Segmentation
 
 This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Python 3, Keras, and TensorFlow. The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
