@@ -27,6 +27,8 @@ Usage: import the module (see Jupyter notebooks for examples), or run from
     python3 balloon.py splash --weights=last --video=<URL or path to file>
 """
 
+# 사용법 python3 balloon.py train --dataset=../../datasets/balloon --weights=coco
+
 import os
 import sys
 import json
@@ -43,7 +45,7 @@ from mrcnn.config import Config
 from mrcnn import model as modellib, utils
 
 # Path to trained weights file
-COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
+COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_balloon.h5")
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
@@ -69,7 +71,7 @@ class BalloonConfig(Config):
     NUM_CLASSES = 1 + 1  # Background + balloon
 
     # Number of training steps per epoch
-    STEPS_PER_EPOCH = 100
+    STEPS_PER_EPOCH = 300
 
     # Skip detections with < 90% confidence
     DETECTION_MIN_CONFIDENCE = 0.9
@@ -195,7 +197,7 @@ def train(model):
     print("Training network heads")
     model.train(dataset_train, dataset_val,
                 learning_rate=config.LEARNING_RATE,
-                epochs=30,
+                epochs=60,
                 layers='heads')
 
 
